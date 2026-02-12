@@ -10,7 +10,6 @@ newUI = UI()
 g = 9.81
 
 def pitch_update(pitch_ref, impact_ref, turn_rate_ref):
-    global air_data
     while True:
         if not Telementry.MapInfo.data.valid: 
             pitch_ref.set("0")
@@ -24,7 +23,7 @@ def pitch_update(pitch_ref, impact_ref, turn_rate_ref):
         altitude = Telementry.Indicators.data.altitude_hour
         vy = Telementry.State.data.vy_m_s
         tas = Telementry.Indicators.data.speed          
-        ny = Telementry.Indicators.data.g_meter         # in G's
+        ny = Telementry.Indicators.data.g_meter 
 
         pitch_ref.set(str(round(pitch, 2)))
         if vy < 0:
