@@ -3,3 +3,4 @@ Lib/
 Scripts/
 pyproject.toml
 pyvenv.cfg
+__pycache__
